@@ -1,0 +1,17 @@
+<div class="sidebar bg-dark " data-color="purple" data-image="../assets/img/sidebar-1.jpg" *ngIf="!isMobileMenu()">
+    <div class="logo">
+        <img class="rounded mx-auto d-block" src="./assets/img/now-logo.png" alt="">
+    </div>
+    <div id="scroll" class="sidebar-wrapper">
+        <nav class="navbar">
+            <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                <li class="nav-item" routerLinkActive="active" *ngFor="let menuItem of menuItems">
+                    <a class="nav-link" style="padding: 13px" [routerLink]="[menuItem.path]">
+                        <i [class]="menuItem.icon"></i>
+                        <p>{{menuItem.title}}</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

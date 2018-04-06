@@ -1,0 +1,46 @@
+<div class="container-fluid">
+	
+	<div class="row">
+		<div class="col-sm-10 col-lg-6">
+			<div class="input-group form-group-no-border">
+				<input type="text" class="form-control" placeholder="Buscar ">
+				<span class="input-group-addon">
+					<i class="now-ui-icons ui-1_zoom-bold"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="card">
+			<ul class="nav nav-tabs nav-tabs-neutral" role="tablist" data-background-color="black">
+				<li class="nav-item">
+					<a class="nav-link" routerLinkActive="active" data-toggle="tab" [routerLink]="['/panel/blocked']" role="tab">
+						<i class="now-ui-icons objects_umbrella-13"></i> Clientes Bloqueados
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" routerLinkActive="active" data-toggle="tab" [routerLink]="['/panel/update-history']" role="tab">
+						<i class="now-ui-icons shopping_cart-simple"></i> Histórico de Atualizações
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" routerLinkActive="active" data-toggle="tab" [routerLink]="['/panel/blocked-history']" role="tab">
+						<i class="now-ui-icons shopping_shop"></i> Histórico de Bloqueios
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" routerLinkActive="active" data-toggle="tab" [routerLink]="['/panel/last-update']"  role="tab">
+						<i class="now-ui-icons ui-2_settings-90"></i>Ultimas atualizações
+					</a>
+				</li>
+			</ul>
+			<div class="card-body">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<router-outlet></router-outlet>                                        
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
